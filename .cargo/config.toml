@@ -1,0 +1,10 @@
+# Cargo config file.
+# See: https://doc.rust-lang.org/cargo/reference/config.html
+[env]
+RUST_LOG = ""
+RUSTFLAGS = "-Zlocation-detail=none"
+
+# Requires the `mold` linker
+#    [target.x86_64-unknown-linux-gnu]
+#    linker = "/usr/bin/clang"
+#    rustflags = ["-C", "link-arg=--ld-path=/usr/bin/mold"]

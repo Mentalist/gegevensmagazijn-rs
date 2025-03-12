@@ -1,0 +1,5 @@
+{
+    "@odata.context": "https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/$metadata#Activiteit(Id,Onderwerp)/$entity",
+    "Id": "b7cf7dfc-1f46-4351-b2a5-000236b07ffa",
+    "Onderwerp": "Procedures en brieven "
+}

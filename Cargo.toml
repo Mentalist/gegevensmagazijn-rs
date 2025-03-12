@@ -1,0 +1,47 @@
+[package]
+name = "gegevensmagazijn"
+version = "0.1.0"
+authors = ["Mentalist"]
+description = "een rudimentaire, simplistische en generieke implementatie van een API-client voor het Gegevensmagazijn van de Tweede Kamer der Staten-Generaal"
+keywords = ["webdev", "api", "tweede-kamer", "gegevensmagazijn"]
+categories = ["api-bindings", "web-programming"]
+documentation = "https://docs.rs/gegevensmagazijn"
+homepage = "https://github.com/Mentalist/gegevensmagazijn-rs"
+repository = "https://github.com/Mentalist/gegevensmagazijn-rs"
+readme = "README.md"
+license-file = "LICENSE"
+edition = "2024"
+publish = true
+exclude = [
+    "tests/*",
+    "Cargo.lock",
+    "Cargo.toml.orig",
+    ".github/*",
+    ".gitignore",
+    "rustfmt.toml",
+    ".cargo/*",
+]
+
+[dependencies]
+serde = { version = "1.0.219", features = ["derive"] }
+serde_json = "1.0.140"
+reqwest = { version = "0.12.14" }
+thiserror = "2.0.12"
+url = "2.5.4"
+
+[dev-dependencies]
+mockito = "1.7.0"
+tokio = { version = "1.44.0", features = ["full"] }
+
+[lints.rust]
+unsafe_code = "forbid"
+unused_imports = "warn"
+dead_code = "warn"
+unused_variables = "warn"
+
+[profile.release]
+strip = true
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"

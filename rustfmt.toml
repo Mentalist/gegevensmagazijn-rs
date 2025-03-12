@@ -1,0 +1,22 @@
+edition = "2024"
+
+format_code_in_doc_comments = true
+format_strings = true
+wrap_comments = true
+hard_tabs = false
+
+tab_spaces = 4
+max_width = 80
+chain_width = 60
+array_width = 40
+
+imports_granularity = "Crate"  # Valid: Preserve, Item, Module, Crate
+group_imports = "StdExternalCrate"  # Valid: Preserve, StdExternalCrate
+
+match_arm_blocks = true
+match_block_trailing_comma = true
+
+normalize_comments = true
+
+fn_params_layout = "Tall"  # Valid: Compressed, Vertical, Tall
+use_small_heuristics = "Default"  # Valid: Off, Default, Max
